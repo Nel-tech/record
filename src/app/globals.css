@@ -1,0 +1,68 @@
+
+@import "tailwindcss";
+
+@theme inline {
+   --font-sans: var(--font-inter);
+  --font-serif: var(--font-dm-serif), Georgia, serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #F5F6F2;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-inter), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid #527A57;
+  outline-offset: 3px;
+}
+
+.app-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(520px, 94vw);
+  max-height: min(90dvh, 860px);
+  overflow: auto;
+  margin: auto;
+  border: 1px solid #E0E5DC;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #202B23;
+  padding: 20px;
+  box-shadow: 0 24px 80px rgb(20 35 24 / 22%);
+}
+
+.app-dialog::backdrop {
+  background: rgb(15 24 17 / 50%);
+  backdrop-filter: blur(2px);
+}
